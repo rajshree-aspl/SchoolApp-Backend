@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "d67cc774-46e2-4693-aecb-a13b42409648",
+		"name": "Schoolapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30640581"
+	},
+	"item": [
+		{
+			"name": "gettoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \r\n        \"superuser@gmail.com\"\r\n    ,\r\n    \"password\": \r\n        \"superuser\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/gettoken/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"gettoken",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMDY4MjgzLCJpYXQiOjE3MjEwMjUwODMsImp0aSI6ImEwNDZmYTk5OTBjYzQ3NTI4MDUxNTA3ODI5MzQ5ZDU4IiwidXNlcl9pZCI6MSwiZW1haWwiOiJzdXBlcnVzZXJAZ21haWwuY29tIn0.UuhaZoMcRq-21Y6Xx7RwaNVitK2bbgggoVJ7Ra1mEmQ\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/refresh-token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"refresh-token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMDgwODM3LCJpYXQiOjE3MjEwMzc2MzcsImp0aSI6ImI0YjU3NDBkM2ZmZDQ1ZWNiNDNlZTRmMGVmZjhmNTEwIiwidXNlcl9pZCI6MTAsImVtYWlsIjoic3VwZXJAZ21haWwuY29tIn0.6Whmv5yEMoyKQn1tJHsdleWDFMqPZrd8vwcONVSt8Us",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMTUzMjgzLCJpYXQiOjE3MjExMTAwODMsImp0aSI6ImNmNzUzOWI0YjcyMzQ4YzM5MmZmMmUxMDI5ZDRmYzFkIiwidXNlcl9pZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.UZflh29ma0D1u4_IV-m5ob4gg6HmqZs1iooLQNnY5gY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"email\": \r\n            \"student3@gmail.com\"\r\n        ,\r\n        \"fullName\": \r\n            \"hemasri baini\"\r\n        ,\r\n        \"gender\": \r\n            \"female\"\r\n        ,\r\n        \"address\": \r\n            \"Bangalore\"\r\n        ,\r\n        \"dob\": \r\n            \"2005-09-09\"\r\n    ,\r\n        \"date_joined\": \r\n            \"2024-07-15\",\r\n        \r\n        \"user_type\": \r\n            \"student\",\r\n        \r\n        \"password\": \r\n            \"user@123\"\r\n        ,\r\n        \"password2\": \r\n            \"user@123\"\r\n        \r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/registration/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"registration",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login_schoolapp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n   \r\n//         \"email\": \"admin@gmail.com\"\r\n            \r\n//         ,\r\n//         \"password\": \"admin@7802\"\r\n       \r\n// }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n{\r\n   \r\n        \"email\": \"student2@gmail.com\"\r\n            \r\n        ,\r\n        \"password\": \"user@123\"\r\n}\r\n       \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password_reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwNzMwNTk4LCJpYXQiOjE3MjA2ODczOTgsImp0aSI6IjVmZjJhOTQ3OGI1ZTQ1MTE4NWVkOWRmNTFkMjcwZDFlIiwidXNlcl9pZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.aqZjIKjQvGktRyE1zhwS6bgzR1EtFFpFNoWPd9dwR1s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/password_reset/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"password_reset",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password_confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/User/password_confirm/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"User",
+						"password_confirm",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "student_profile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "student_edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMDQ0ODAxLCJpYXQiOjE3MjAwMDE2MDEsImp0aSI6ImE3NDYwYWJjOGQ5MzQzODliYzhhZmFiNDJkM2Y0NmY2IiwidXNlcl9pZCI6NCwiZW1haWwiOiJzdXBlcjJAZ21haWwuY29tIn0.jQOy5qzB9B-K0rET42b5-1b532HCG31GlA7BGkaiClI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentid\": 1,\r\n    \"user\": 2,\r\n    \"fname\": \"hema\",\r\n    \"lname\": \"sri\",\r\n    \"gender\": \"female\",\r\n    \"dob\": \"2024-06-25\",\r\n    \"address\": \"dewfgv\",\r\n    \"contactno\": \"6754324567\",\r\n    \"email\": \"super@gmail.com\",\r\n    \"createdat\": \"2024-07-02\",\r\n    \"updatedat\": \"2024-07-02\",\r\n    \"schoolid\": {\r\n        \"schoolid\": 1,\r\n        \"schoolname\": \"gitam\",\r\n        \"schoolcode\": \"646ggv\",\r\n        \"createdat\": \"2024-07-02T07:06:24.102272Z\",\r\n        \"updatedat\": \"2024-07-02T07:06:24.102272Z\"\r\n    },\r\n    \"clssectionid\": {\r\n        \"clssectionid\": 1,\r\n        \"sectionname\": \"d\",\r\n        \"createdat\": \"2024-07-02T07:06:43.655557Z\",\r\n        \"updatedat\": \"2024-07-02T07:06:43.655557Z\",\r\n        \"classid\": 1\r\n    },\r\n    \"current_grade\": \"A+\",\r\n    \"academic_year\": \"2024\",\r\n    \"nationality\": \"Indian\",\r\n    \"religion\": \"Hindu\",\r\n    \"languages_spoken\": \"Telugu, English\",\r\n    \"state\": \"Andhra\",\r\n    \"city\": \"Tirupati\",\r\n    \"pin\": \"517501\",\r\n    \"country\": \"India\",\r\n    \"phone_number\": \"8765432456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/student_edit_details/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"student_edit_details",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "student_update_photo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwNzMwNTk4LCJpYXQiOjE3MjA2ODczOTgsImp0aSI6IjVmZjJhOTQ3OGI1ZTQ1MTE4NWVkOWRmNTFkMjcwZDFlIiwidXNlcl9pZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.aqZjIKjQvGktRyE1zhwS6bgzR1EtFFpFNoWPd9dwR1s",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxMDg2MzYwLCJpYXQiOjE3MjEwNDMxNjAsImp0aSI6ImQwZGNmNTI5MGQ2ZTRiZjk5MGUwOTZkOTY0YWRiNDYzIiwidXNlcl9pZCI6MTEsImVtYWlsIjoic3R1ZGVudDJAZ21haWwuY29tIn0.PcRnM5jQtbXYNB-Dqv0S9r_kRo62IB8hBbaT9VVxYns",
+						"type": "text"
+					},
+					{
+						"key": "photo",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/C:/Users/hemasri.b/Downloads/pexels-jonas-mohamadi-1427288.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/students_update-photo/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"students_update-photo",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate_studentidcard",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "parents_information",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "admin-approve",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "admin-reject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwNzMwNTk4LCJpYXQiOjE3MjA2ODczOTgsImp0aSI6IjVmZjJhOTQ3OGI1ZTQ1MTE4NWVkOWRmNTFkMjcwZDFlIiwidXNlcl9pZCI6MiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.aqZjIKjQvGktRyE1zhwS6bgzR1EtFFpFNoWPd9dwR1s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/admin-reject/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"admin-reject",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students-homepage",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Taks_update",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "taks-create",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "tasks-delete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete-token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
